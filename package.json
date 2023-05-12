@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffreyvicente/09-readme-wizard.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jeffreyvicente/09-readme-wizard/issues"
+  },
+  "homepage": "https://github.com/jeffreyvicente/09-readme-wizard#readme"
 }
