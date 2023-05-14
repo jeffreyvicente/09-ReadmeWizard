@@ -26,8 +26,9 @@ const questions = [
         name: "project-usage",
     },
     {
-        type: "input",
+        type: "list",
         message: "What license is the project using?",
+        choices: ["Apache 2.0 License", "MIT License", "Mozilla Public License 2.0", "Creative Commons"],
         name: "project-license",
     },
     {
@@ -59,6 +60,9 @@ function init() {
     console.log(answers)
     
     );
+    
+
+
 }
 
 // Function call to initialize app

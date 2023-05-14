@@ -1,0 +1,70 @@
+# README Wizard
+
+
+
+## Professional README Generator Starter Code
+
+[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+
+
+## Description
+
+
+## Table of Contents
+
+- [Installation](#installation)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Mock-up](#mock-up)
+- [Preview](#preview)
+- [Features](#features)
+- [Technology Used](#technologies-used)
+
+
+## Installation
+
+
+```
+```
+
+
+To use this application, run the following command:
+
+```
+node index.js
+```
+
+Then answer the prompts to generate your README.md file.
+
+
+
+## User Story
+```
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+```
+
+## Acceptance Criteria
+```
+
+```
+
+
+## Mock-up
+
+
+
+## Preview
+
+
+![alt text](/assets/images/Work%20Day%20Scheduler.gif)
+
+
+## Features
+
+
+
+## Technologies Used
+
