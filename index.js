@@ -1,6 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 
+// fs is a Node standard library package for reading and writing files
+const fs = require('fs');
+
 // TODO: Create an array of questions for user input
 //generated with the title of my project and sections entitled Description, 
 //Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
@@ -49,21 +52,60 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile('log.txt', data, (err) =>
+    err ? console.error(err) : console.log('Success!')
+    );
+
+
+}
 
 // TODO: Create a function to initialize app
 function init() {
 
     //console.log(questions)
     inquirer.prompt(questions)
-    .then((answers) => 
-    console.log(answers)
-    
-    );
+    .then((answers) => {
+        console.log(answers);
+        const readmeComplete = readmeData();
+        writeToFile("readme.md" , readmeComplete);
+    });
     
 
 
 }
 
+
+function readmeData() {
+    
+    return `
+    # README Wizard
+
+
+
+    ## Professional README Generator Starter Code
+    
+    [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+    
+    
+    
+    ## Description
+    
+    
+    ## Table of Contents
+    
+    - [Installation](#installation)
+    - [User Story](#user-story)
+    - [Acceptance Criteria](#acceptance-criteria)
+    - [Mock-up](#mock-up)
+    - [Preview](#preview)
+    - [Features](#features)
+    - [Technology Used](#technologies-used)
+    
+    `;
+ 
+}
+
 // Function call to initialize app
 init();
+
