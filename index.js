@@ -36,7 +36,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is the project contributing?",
+        message: "What guidelines can people follow to contribute",
         name: "project-contributing",
     },
     {
@@ -79,29 +79,39 @@ function init() {
 function readmeData() {
     
     return `
-    # README Wizard
+    # ${project-title}
 
-
-
-    ## Professional README Generator Starter Code
-    
-    [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
-    
-    
-    
     ## Description
+    ${project-desc}
     
     
     ## Table of Contents
     
     - [Installation](#installation)
-    - [User Story](#user-story)
-    - [Acceptance Criteria](#acceptance-criteria)
-    - [Mock-up](#mock-up)
-    - [Preview](#preview)
-    - [Features](#features)
-    - [Technology Used](#technologies-used)
-    
+    - [Usage](#usage)
+    - [License](#license)
+    - [How to Contribute](#how-to-contribute)
+    - [Tests](#preview)
+    - [Features](#tests)
+    - [Questions](#questions)
+
+    ## Installation
+    ${project-desc}
+
+    ## Usage
+    ${project-usage}
+
+    ## License
+    ${project-license}
+
+    ## How to Contribute
+    ${project-contributing}
+
+    ## Tests
+    ${project-tests}
+
+    ## Questions
+    ${project-questions}
     `;
  
 }
@@ -109,3 +119,10 @@ function readmeData() {
 // Function call to initialize app
 init();
 
+
+/*
+ ## Professional README Generator Starter Code
+    
+    [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+*/
