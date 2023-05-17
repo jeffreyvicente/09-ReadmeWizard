@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
+// If there is no license, ir returns an empty string
 function renderLicenseBadge(license) {
   switch(license) {
     case "Apache 2.0 License":
@@ -21,13 +21,12 @@ function renderLicenseBadge(license) {
       badge = "";
   }
   
-  console.log(badge);
-
+  //Returns the badge value
   return badge;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// A function that returns the license link
+// If there is no license, it returns an empty string
 function renderLicenseLink(license) {
   switch(license){
     case "Apache 2.0 License":
@@ -45,25 +44,25 @@ function renderLicenseLink(license) {
     default:
       link = "";
   }
-  console.log(link);
 
-  return link;
-
-
+  //Returns the link value
+  return link;;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//Create a function that returns the license section of README
+// If there is no license, it returns an empty string
 function renderLicenseSection(license) {
 
+  //Checks if the license is blank. 
   if(!license){
     const badgelink = ""
-    console.log("Render is blank");
+    //console.log("Render is blank");
     return badgelink;
   }
 
+//Creates the license badge to add to the top of the readme
 const badgelink = renderLicenseBadge(license) + renderLicenseLink(license);
-console.log(badgelink);
+//returns the complete badge link
 return badgelink;
 
 }
@@ -77,7 +76,9 @@ return badgelink;
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 
+  //creates a variable license from the return of the renderLicenseSection
   const license = renderLicenseSection(data.pLicense);
+  //creates a variable link that returns the link for the license
   const link = renderLicenseLink(data.pLicense);
 
 
