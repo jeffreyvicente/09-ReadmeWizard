@@ -72,10 +72,13 @@ renderLicenseSection("MIT License");
 function generateMarkdown(data) {
 
   const license = renderLicenseSection(data.pLicense);
+  const link = renderLicenseLink(data.pLicense);
 
 
   return `
 # ${data.pTitle}
+
+${license}
 
 ## Description
 ${data.pDesc}
@@ -98,7 +101,7 @@ ${data.pInstallation}
 ${data.pUsage}
 
 ## License
-${license}
+This project is currently licenced under [${data.pLicense}]${link}
 
 ## How to Contribute
 ${data.pContributing}
@@ -107,7 +110,10 @@ ${data.pContributing}
 ${data.pTests}
 
 ## Questions
-${data.pQuestions}
+
+If you have any questions, comments, or if you'd like to check out my other work, feel free to reach out to me on GitHub or by email. 
+GitHub: [${data.github}](https://github.com/${data.github});
+Email: ${data.email};
 
 
 `;
