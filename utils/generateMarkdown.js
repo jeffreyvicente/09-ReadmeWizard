@@ -56,6 +56,12 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
 
+  if(!license){
+    const badgelink = ""
+    console.log("Render is blank");
+    return badgelink;
+  }
+
 const badgelink = renderLicenseBadge(license) + renderLicenseLink(license);
 console.log(badgelink);
 return badgelink;
@@ -63,9 +69,9 @@ return badgelink;
 }
 
 //Test functions
-renderLicenseBadge("MIT License");
-renderLicenseLink("MIT License")
-renderLicenseSection("MIT License");
+//renderLicenseBadge("MIT License");
+//renderLicenseLink("MIT License")
+//renderLicenseSection("d");
 
 
 // TODO: Create a function to generate markdown for README
@@ -112,8 +118,8 @@ ${data.pTests}
 ## Questions
 
 If you have any questions, comments, or if you'd like to check out my other work, feel free to reach out to me on GitHub or by email. 
-GitHub: [${data.github}](https://github.com/${data.github});
-Email: ${data.email};
+- GitHub: [${data.github}](https://github.com/${data.github});
+- Email: ${data.email};
 
 
 `;
