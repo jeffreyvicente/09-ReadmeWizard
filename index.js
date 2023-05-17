@@ -11,49 +11,49 @@ const questions = [
     {
         type: "input",
         message: "What is the title of the project",
-        name: "project-title",
+        name: "pTitle",
     },
     {
         type: "input",
         message: "What is the project description?",
-        name: "project-desc",
+        name: "pDesc",
     },
     {
         type: "input",
         message: "What is the project installation steps for the project?",
-        name: "project-installation",
+        name: "pInstallation",
     },
     {
         type: "input",
         message: "What is the project usage?",
-        name: "project-usage",
+        name: "pUsage",
     },
     {
         type: "list",
         message: "What license is the project using?",
-        choices: ["Apache 2.0 License", "MIT License", "Mozilla Public License 2.0", "Creative Commons"],
-        name: "project-license",
+        choices: ["Apache 2.0 License", "MIT License", "Mozilla Public License 2.0", "Boost Software License 1.0"],
+        name: "pLicense",
     },
     {
         type: "input",
         message: "What guidelines can people follow to contribute",
-        name: "project-contributing",
+        name: "pContributing",
     },
     {
         type: "input",
         message: "What is the project test?",
-        name: "project-tests",
+        name: "pTests",
     },
     {
         type: "input",
         message: "What is the project Questions?",
-        name: "project-questions",
+        name: "pQuestions",
     },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('log.txt', data, (err) =>
+    fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log('Success!')
     );
 
@@ -67,8 +67,15 @@ function init() {
     inquirer.prompt(questions)
     .then((answers) => {
         console.log(answers);
-        const readmeComplete = readmeData();
-        writeToFile("readme.md" , readmeComplete);
+        const generates = require('./utils/generateMarkdown.js');
+        //answers.pLicense = "Hello Hello Helo";
+        
+
+        const readmeComplete = generates.generateMarkdown(answers);
+
+        //const readmeComplete = readmeData(answers);
+        writeToFile("readmeDemo.md" , readmeComplete);
+        console.log(readmeComplete);
     });
     
 
@@ -76,45 +83,6 @@ function init() {
 }
 
 
-function readmeData() {
-    
-    return `
-    # ${project-title}
-
-    ## Description
-    ${project-desc}
-    
-    
-    ## Table of Contents
-    
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [How to Contribute](#how-to-contribute)
-    - [Tests](#preview)
-    - [Features](#tests)
-    - [Questions](#questions)
-
-    ## Installation
-    ${project-desc}
-
-    ## Usage
-    ${project-usage}
-
-    ## License
-    ${project-license}
-
-    ## How to Contribute
-    ${project-contributing}
-
-    ## Tests
-    ${project-tests}
-
-    ## Questions
-    ${project-questions}
-    `;
- 
-}
 
 // Function call to initialize app
 init();
@@ -124,5 +92,52 @@ init();
  ## Professional README Generator Starter Code
     
     [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+*/
+
+
+/*
+function readmeData({pTitle,pDesc ,pInstallation, pUsage, pLicense, pContributing, pTests,pQuestions}) {
+    
+   const readme = `
+# ${pTitle}
+
+## Description
+${pDesc}
+    
+    
+## Table of Contents
+    
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#preview)
+- [Features](#tests)
+- [Questions](#questions)
+
+## Installation
+${pInstallation}
+
+## Usage
+${pUsage}
+
+## License
+${pLicense}
+
+## How to Contribute
+${pContributing}
+
+## Tests
+${pTests}
+
+## Questions
+${pQuestions}
+`;
+
+    return readme;
+ 
+}
+
 
 */
