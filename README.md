@@ -69,7 +69,7 @@ THEN I am taken to the corresponding section of the README
 ![alt text](/images/screenshot.png)
 
 ## Demo
-![alt text](/images/Demo2.gif)
+![alte text](/images/Demo2.gif)
 
 
 
