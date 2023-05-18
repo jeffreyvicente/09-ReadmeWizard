@@ -1,13 +1,5 @@
 # README Wizard
 
-
-
-## Professional README Generator Starter Code
-
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
-
-
-
 ## Description
 
 README Wizard allows users to quickly and easily generate a professional README.md file for projects on GitHub. The user is prompted with a series of questions about their project, including its name, description,and installation instructions. The application then takes the user's input and generates a high-quality README file that can be added to their project repository.
@@ -18,8 +10,7 @@ README Wizard allows users to quickly and easily generate a professional README.
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Mock-up](#mock-up)
-- [Preview](#preview)
-- [Features](#features)
+- [Demo](#video-demo)
 - [Technology Used](#technologies-used)
 
 
@@ -77,12 +68,12 @@ THEN I am taken to the corresponding section of the README
 
 ![alt text](/images/screenshot.png)
 
-## Video Demo
+## Demo
+![alt text](/images/Demo2.gif)
 
 
 
-
-[Demo Backup](https://drive.google.com/file/d/1x5UV2QOceWztq1vh6Wk6k3fx4U7O78_u/view?usp=share_link)
+[Video Demo Backup](https://drive.google.com/file/d/1x5UV2QOceWztq1vh6Wk6k3fx4U7O78_u/view?usp=share_link)
 
 
 
