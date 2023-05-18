@@ -75,17 +75,17 @@ THEN I am taken to the corresponding section of the README
 
 ## Mock-up
 
+![alt text](/images/screenshot.png)
+
+## Video Demo
 
 
-## Preview
 
 
-![alt text](/assets/images/Work%20Day%20Scheduler.gif)
-
-
-## Features
+[Demo Backup](https://drive.google.com/file/d/1x5UV2QOceWztq1vh6Wk6k3fx4U7O78_u/view?usp=share_link
 
 
 
 ## Technologies Used
+- Nodejs
 

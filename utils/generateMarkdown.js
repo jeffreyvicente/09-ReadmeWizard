@@ -82,6 +82,7 @@ function generateMarkdown(data) {
   const link = renderLicenseLink(data.pLicense);
 
 
+  //The readme template
   return `
 # ${data.pTitle}
 
@@ -125,5 +126,5 @@ If you have any questions, comments, or if you'd like to check out my other work
 
 `;
 }
-
+//Allows to export the generateMarkdown fucntion to be used. 
 module.exports = {generateMarkdown};
